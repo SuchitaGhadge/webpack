@@ -1,5 +1,5 @@
 import App from './App'
-import Logo from '../assets/logo'
+import Logo from './logo.svg'
 const root = document.getElementById('root');
 root.innerHTML = `
     <h1> Learning Web tooling today </h1>
