@@ -6,7 +6,7 @@ const webpackConfig = {
 
     // add clean:true to output to keep the dist folder clean
     output : {
-        filename : "[name].bundle.js",
+        filename : "[name].[contenthash].bundle.js",   // <-- small change that creates a unique hash for data. If data does not change, the hash does not change. If the hash does not change, name does not change. If the name does not change, browser will not downnload that file again.
         path : path.resolve(__dirname, "dist"),
         clean : true
     },
