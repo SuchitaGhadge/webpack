@@ -1,11 +1,14 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 const webpackConfig = {
     entry : path.resolve(__dirname, "src", "index.js"),
 
+    // add clean:true to output to keep the dist folder clean
     output : {
         filename : "main.js",
-        path : path.resolve(__dirname, "dist")
+        path : path.resolve(__dirname, "dist"),
+        clean : true
     },
 
     module: {
@@ -30,6 +33,13 @@ const webpackConfig = {
             }
         ]
     },
+
+    plugins : [
+        new HtmlWebpackPlugin({
+            title : "vanilaJS app",
+            template : path.resolve(__dirname, "src", "index.html")
+        })
+    ],
 
     mode : "production"
 }
