@@ -41,18 +41,18 @@ const webpackConfig = {
         })
     ],
 
-    // optimization: {
-	// 	splitChunks: {
-	// 		cacheGroups: {
-	// 			node_vendors: {
-	// 				name: "vendor",
-	// 				test: /[\\/]node_modules[\\/]/,
-	// 				chunks: "all",
-	// 				priority: 1
-	// 			}
-	// 		}
-	// 	}
-	// },
+    optimization: {
+		splitChunks: {
+			cacheGroups: {
+				node_vendors: {
+					name: "vendor",
+					test: /[\\/]node_modules[\\/]/,
+					chunks: "all",
+					priority: 1
+				}
+			}
+		}
+	},
 
     mode : "production"
 }
